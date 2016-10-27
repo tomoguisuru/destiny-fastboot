@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'github-fastboot-example',
+    modulePrefix: 'destiny-fastboot',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -20,15 +20,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    API_KEY: '97481ed9be8d40e8af9ca94964316ba2',
+    FASTBOOT_API_KEY: 'a7ff0fadde404a40949af9fbac0bcb9e',
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.API_KEY = '6975606c4aa54f33b9ed883aa1be59a7';
   }
 
   if (environment === 'test') {

@@ -1,7 +1,7 @@
 {
-  "name": "github-fastboot-example",
-  "version": "0.0.0",
-  "description": "Small description for github-fastboot-example goes here",
+  "name": "destiny-fastboot",
+  "version": "0.0.1",
+  "description": "Simple example of querying an API using Fastboot",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,7 +16,7 @@
   "engines": {
     "node": ">= 0.12.0"
   },
-  "author": "",
+  "author": "Brandon Drake",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
