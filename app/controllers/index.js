@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import fetch from 'ember-network/fetch';
-import ENV from 'destiny-fastboot/config/environment';
 
 const {
   Controller,
@@ -13,10 +12,11 @@ const IndexController = Controller.extend({
 
   page: 0,
   items: null,
+  API_KEY: null,
 
   _update_items(page = 0) {
     const baseURL = 'https://www.bungie.net/Platform/Destiny';
-    const API_KEY = window.location ? ENV.API_KEY : ENV.FASTBOOT_API_KEY;
+    const API_KEY = get(this, 'API_KEY');
     const request_data = {
       headers: {
         'Accept': 'application/json',
