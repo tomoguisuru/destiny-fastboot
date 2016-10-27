@@ -1,7 +1,8 @@
-# Github-fastboot-example
+# Destiny Item Explorer Fastboot Example
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Queries the Destiny API using a Fastboot as the initial load point and github pages as the example page
+
+[Destiny Fastboot](https://tomoguisuru.github.io/destiny-fastboot)
 
 ## Prerequisites
 
@@ -15,8 +16,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd github-fastboot-example`
+* `git clone git@github.com:tomoguisuru/destiny-fastboot.git` this repository
+* `cd destiny-fastboot`
 * `npm install`
 * `bower install`
 
@@ -24,6 +25,11 @@ You will need the following things properly installed on your computer.
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
+
+## Running Fastboot
+
+* `ember fastboot --serve-assets`
+* Visit your app at [http://localhost:3000](http://localhost:3000).
 
 ### Code Generators
 
@@ -39,9 +45,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Deploying to GitHub pages
 
-Specify what it takes to deploy your app.
+* `ember github-pages:commit --message "Initial gh-pages release"`
 
 ## Further Reading / Useful Links
 
