@@ -48,7 +48,23 @@ const IndexController = Controller.extend({
       const page = get(this, 'page');
 
       this._update_items(page);
-    }
+    },
+
+    load_page(page = 0) {
+      return this._update_items(page);
+    },
+
+    next_page() {
+      set(this, 'page', parseInt(get(this, 'page')) + 1);
+
+      this.send('load_data');
+    },
+
+    prev_page() {
+      set(this, 'page', parseInt(get(this, 'page')) - 1);
+
+      this.send('load_data');
+    },
   }
 });
 
