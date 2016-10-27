@@ -1,0 +1,9 @@
+{
+  "assets": {
+    "assets/destiny-fastboot.css": "assets/destiny-fastboot-fb733b7265fc23e156e5dfecb44006f9.css",
+    "assets/destiny-fastboot.js": "assets/destiny-fastboot-2ae13d4a6de8dfffa8ee4b09c034c395.js",
+    "assets/vendor.css": "assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css",
+    "assets/vendor.js": "assets/vendor-4f2bb62c5515fa4f28fe4824c842c220.js"
+  },
+  "prepend": ""
+}

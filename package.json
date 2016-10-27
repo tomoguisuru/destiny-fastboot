@@ -1,0 +1,45 @@
+{
+  "dependencies": {
+    "node-fetch": "^1.3.3"
+  },
+  "fastboot": {
+    "moduleWhitelist": [
+      "node-fetch"
+    ],
+    "manifest": {
+      "appFile": "fastboot/destiny-fastboot-2ae13d4a6de8dfffa8ee4b09c034c395.js",
+      "vendorFile": "fastboot/vendor-4f2bb62c5515fa4f28fe4824c842c220.js",
+      "htmlFile": "index.html"
+    },
+    "appConfig": {
+      "modulePrefix": "destiny-fastboot",
+      "environment": "production",
+      "rootURL": "/destiny-fastboot/",
+      "locationType": "hash",
+      "EmberENV": {
+        "FEATURES": {},
+        "EXTEND_PROTOTYPES": {
+          "Date": false
+        }
+      },
+      "APP": {
+        "name": "destiny-fastboot",
+        "version": "0.0.1+f85ba6ce",
+        "autoboot": false,
+        "rootElement": "body"
+      },
+      "API_KEY": "97481ed9be8d40e8af9ca94964316ba2",
+      "FASTBOOT_API_KEY": "a7ff0fadde404a40949af9fbac0bcb9e",
+      "contentSecurityPolicy": {
+        "default-src": "'none'",
+        "script-src": "'self' 'unsafe-inline'",
+        "style-src": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "font-src": "'self' fonts.gstatic.com",
+        "connect-src": "'self'",
+        "img-src": "'self' data:",
+        "media-src": "'self'"
+      },
+      "exportApplicationGlobal": false
+    }
+  }
+}
