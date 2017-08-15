@@ -1,10 +1,11 @@
 import Ember from 'ember';
-import fetch from 'ember-network/fetch';
+import fetch from 'fetch';
 
 const {
   Controller,
   get,
   set,
+  onerror,
 } = Ember;
 
 const IndexController = Controller.extend({
@@ -33,14 +34,18 @@ const IndexController = Controller.extend({
     return fetch(`${baseURL}/Explorer/Items/?${params}`, request_data)
       .then((response) => response.json())
       .then((response) => {
-        const _items = response.Response.definitions.items;
-        const _keys = Object.keys(_items);
-        const items = [];
+        const _items = [];
 
-        _keys.forEach((_key) => items.push(_items[_key]));
+        if ('Response' in response) {
+          const { items } = response.Response.definitions;
 
-        set(this, 'items', items);
-      });
+          for (let i in items) {
+            _items.push(items[i]);
+          }
+        }
+
+        set(this, 'items', _items);
+      }, reason => onerror(reason));
   },
 
   actions: {
